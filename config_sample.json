@@ -1,0 +1,8 @@
+{
+    "server":"https://companyname.leading2lean.com",
+    "apikey":"Your API Key Here",
+    "site":25,
+    "linecode":"Coil Line 2",
+    "verbose":false,
+    "logdirectory":"logs/"
+}
