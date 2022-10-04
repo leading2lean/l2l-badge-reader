@@ -16,14 +16,10 @@ import os, json
 from getpass import getpass
 import l2l_api
 
-__author__ = "Tyler Whitaker"
 __copyright__ = "Copyright 2022, L2L Inc"
-__credits__ = ["Tyler Whitaker"]
 __license__ = "MIT"
-__version__ = "1.0.0"
-__maintainer__ = "Tyler Whitaker"
-__email__ = "tyler@L2L.com"
-__status__ = "Dev"
+__version__ = "1.0.1"
+__status__ = "Production"
 
 
 def main():

@@ -6,8 +6,8 @@ user's badge with the value stored as the user's externalID in L2L.
 
 For best results, configure your scanner to append an Enter(Return) after the scan.
 
-Author: Tyler Whitaker
-Copyright 2022, L2L Inc"
+Copyright 2022, L2L Inc
+
 Version 1.0.0
 
 <hr>

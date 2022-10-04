@@ -4,14 +4,10 @@
 
 import requests, datetime, json, urllib.parse
 
-__author__ = "Tyler Whitaker"
 __copyright__ = "Copyright 2022, L2L Inc"
-__credits__ = ["Tyler Whitaker"]
 __license__ = "MIT"
 __version__ = "1.0.0"
-__maintainer__ = "Tyler Whitaker"
-__email__ = "tyler@L2L.com"
-__status__ = "Dev"
+__status__ = "Production"
 
 DATE_STRING_FORMAT = "%Y-%m-%d"
 DATETIME_STRING_FORMAT = "%Y-%m-%d %H:%M:%S"
@@ -43,7 +39,7 @@ class L2LAPI:
         if parameters is None:
             parameters = {}
         response = requests.get(f"{self.SERVER}{api}?auth={self.AUTH}", params=parameters)
-        response_obj = json.loads(response.content)
+        response_obj = response.json()
         self.log(f'{response.status_code}: {response.url}')
         if not response_obj['success']:
             self.log(f"Parameters: {parameters}")
@@ -56,7 +52,7 @@ class L2LAPI:
             parameters = {}
         parameters['auth'] = self.AUTH
         response = requests.post(f"{self.SERVER}{api}?auth={self.AUTH}", data=parameters)
-        response_obj = json.loads(response.content)
+        response_obj = response.json()
         self.log(f'{response.status_code}: {response.url}')
         if not response_obj['success']:
             self.log(f"Parameters: {parameters}")
